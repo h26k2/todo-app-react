@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+html{
+    height:100%;
+}
+
+head[data-page] + body , 
+head[data-page] + body > #root{
+    height:100%;
+    margin:0;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+head[data-page] + body {
+    box-sizing: border-box;
+    text-transform: capitalize;
+    background:url("https://images.pexels.com/photos/1332373/pexels-photo-1332373.jpeg?auto=compress&cs=tinysrgb&h=650&w=940")
+    center center / cover no-repeat;
+    opacity: 0;
+    animation:LoadAnimation 300ms ease 0s 1 forwards;
+}
+
+@keyframes LoadAnimation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+head[data-page] + body::before{
+    content:"";
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background:rgba(0,0,0,0.2); 
+}
+
+head[data-page] + body .main-container{
+    position: relative;
+    height: 100%;
+    width:100%;
+    left:0;
+    top:0;
+}
+
+
+head[data-page] + body .text-container{
+    position: relative;
+    display: inline-block;
+    width:80%;
+    height:auto;
+    left:50%;
+    top:30%;
+    transform:translateX(-50%) translateY(-30%);
+    text-align: center;
+    color:#fff;
+}
+
+
+head[data-page] + body .text-container > h3{
+    font-family: "montserrat",Arial, Helvetica, sans-serif;  
+    font-weight: 500;
+
+}
+
+head[data-page] + body .text-container > a{
+    color:#fff;
+    position: relative;
+    display: inline-block;
+}
+
+head[data-page] + body .text-container > a::before{
+   content:"";
+   position: absolute;
+   width:100%;
+   height:1px;
+   left:0;
+   right:0;
+   margin:auto;
+   bottom:-2px;
+   background:#fff;
+   animation:underLine 1.5s ease 0s infinite forwards;
+}
+
+@keyframes underLine{
+    0%{
+        width:0;
+    }
+    50%{
+        width:100%;
+    }
+    100%{
+        width:0%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    head[data-page] + body .text-container{
+        top:5em;
+        transform:translateX(-50%) translateY(0);
+    }
+}
+
+@media only screen and (max-height:300px){
+    head[data-page] + body .text-container{
+        top:2em;
+    }
+}

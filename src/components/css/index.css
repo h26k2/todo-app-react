@@ -1,0 +1,156 @@
+
+
+/****************
+  GLOBAL RULES
+*****************/
+
+body{
+    box-sizing: border-box;
+}
+
+.no-bottom-margin{
+    margin-bottom:0;
+}
+
+.right-left-borders{
+    border-left:2px solid #009688;
+    border-right:2px solid #009688;
+}
+
+.default-padding{
+    padding:0.6em;
+}
+
+.align-btn{
+    margin-top:0.5em;
+    padding-left:2em;
+    padding-right:2em;
+}
+
+.status-heading{
+    text-transform: capitalize;
+}
+
+.divider-bottom-margin{
+    margin-bottom:2em;
+}    
+
+.btn,.btn-floating{
+    background-color:#8e24aa;
+    background-image: linear-gradient(141deg,#8e24aa   0%,#9c27b0   51%,#ab47bc   81%);    
+}
+
+.badge{
+    background-color:#8e24aa!important;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+    border-bottom: 1px solid #8e24aa!important;
+    -webkit-box-shadow: 0 1px 0 0 #8e24aa!important;
+    box-shadow: 0 1px 0 0 #8e24aa!important;
+}
+
+input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label{
+    color:#8e24aa
+}
+
+
+/***********************
+    MAIN CONTAINER
+************************/
+
+
+.app.container{
+    margin-top:4em;
+    box-shadow:0px 15px 40px 0 rgba(20,52,92,0.2);
+    border-radius:10px;
+    transition:box-shadow 300ms ease 0s;
+}
+
+.app.container:hover{
+    box-shadow:0px 30px 80px 0 rgba(20,52,92,0.2)
+}
+
+
+/*************
+    HEADER 
+**************/
+
+.header-container{
+    padding:0.25em;
+    background-color:#8e24aa;
+    background-image: linear-gradient(141deg,#8e24aa   0%,#9c27b0   51%,#ab47bc   81%);    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.header-container h2{
+    text-transform: capitalize;
+    margin:0.6em 0.1em 0.7em 0.1em ;
+    color:#fff;
+    font-weight: 300;
+    padding-left:0.5em;
+    padding-right:0.5em;
+}
+
+
+/*****************
+    COLLECTION
+******************/
+
+
+[type="checkbox"].filled-in:not(:checked)+span:not(.lever):after,
+[type="checkbox"].filled-in:checked+span:not(.lever):after{
+    margin-top:8px;    
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):before,
+[type="checkbox"].filled-in:not(:checked)+span:not(.lever):before{
+    margin-top: 10px;
+}
+
+.collection .collection-item{
+    position: relative;
+    padding-top:0.8em;
+    padding-bottom:0.8em;
+    padding-right:3.5em;
+}
+.collection-item .btn-floating{
+    position: absolute;
+    top:50%;
+    right:0.8em;
+    transform:translateY(-50%)
+}
+
+.collection.completed-task-collection .collection-item{
+    padding:1.5em 3.5em 1.5em 1.5em;
+}
+
+
+[type="checkbox"].filled-in:checked+span:not(.lever):after{
+    border: 2px solid #5a5a5a;
+    background:transparent
+}
+
+
+/*********************
+    MEDIA QUERIES
+**********************/
+
+
+@media only screen and (max-width:992px){
+    
+    /*input field*/
+
+    .input-field{
+        margin-top:0.1em;
+        margin-bottom:0.1em;
+    }
+
+    /*input area => main form*/
+
+    form{
+        margin-top:1em;
+    }
+
+}
