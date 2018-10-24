@@ -9,7 +9,7 @@ export default class Routes extends React.Component{
         return(
             <Router history={browserHistory}>
                 <Route path={'/'} component={App} />
-                <Route path={'/public/index.html'} component={App} />
+                <Route path={'/todo-app-react/public/index.html'} component={App} />
                 <Route path={'*'} component={Four0Four}/>
             </Router>
         );
